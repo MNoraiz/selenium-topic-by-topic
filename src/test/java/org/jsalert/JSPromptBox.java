@@ -11,7 +11,7 @@ public class JSPromptBox {
     // WebDriver is an interface in Selenium that represents an instance of a web browser.
     static WebDriver driver;
     public static void main(String[] args) throws InterruptedException {
-        // We use WebDriverManager (library ) to manage the ChromeDriver binary and set it up for use.
+        // We use WebDriverManager (library) to manage the ChromeDriver binary and set it up for use.
         WebDriverManager.chromedriver().setup();
 
         // This line initializes the driver variable with a new instance of ChromeDriver.
@@ -34,6 +34,8 @@ public class JSPromptBox {
         // Accept it
         alert.accept();
 
+
+        // after alert is acknowledged driver automatically back to home page
 
 
     }
