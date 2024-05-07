@@ -1,20 +1,16 @@
 package org.actionclass;
 
+
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-                    /*
-                    * Perform Action Using a Find element
-                    */
-
-public class RightClick {
+/*
+                 * Perform Action Using a Keyboard
+                 */
+public class RightClick2 {
     static WebDriver driver;
-
     public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -31,8 +27,16 @@ public class RightClick {
         action.contextClick(rightClick).perform();
         Thread.sleep(1000);
 
-        //this line performs Click on "Copy" after opening the "Context Menu"
-        driver.findElement(By.xpath("//body[1]/ul[1]/li[3]/span[1]")).click();
+        // // Simulates pressing 'Arrow Down' key four times and 'Enter' key once, with a 1-second pause between actions.
+        action.sendKeys(Keys.ARROW_DOWN).perform();
+        Thread.sleep(1000);
+        action.sendKeys(Keys.ARROW_DOWN).perform();
+        Thread.sleep(1000);
+        action.sendKeys(Keys.ARROW_DOWN).perform();
+        Thread.sleep(1000);
+        action.sendKeys(Keys.ARROW_DOWN).perform();
+        Thread.sleep(1000);
+        action.sendKeys(Keys.RETURN).perform();
 
         // Handling Alert
         Alert a =  driver.switchTo().alert();
