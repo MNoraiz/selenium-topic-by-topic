@@ -38,5 +38,6 @@ public class HandleMultipleAlert {
         promptBox.accept();
         Thread.sleep(2000);
 
+
     }
 }
