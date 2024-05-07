@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class DragAndDrop {
+public class DragAndDropByUsingMouse {
     static WebDriver driver;
     public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromedriver().setup();
@@ -19,7 +19,7 @@ public class DragAndDrop {
 
         Actions action = new Actions(driver);
 
-        // Executes a drag-and-drop action by clicking and holding the 'source' element, moving it to the 'target' element.
-        action.dragAndDrop(source, target).perform();
+        //Executes a drag-and-drop action by clicking and holding the 'source' element, moving it to the 'target' element.
+        action.clickAndHold(source).moveToElement(target).release(source).build().perform();
     }
 }
