@@ -6,12 +6,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class ImplicitWait {
     static WebDriver driver;
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+
+        /*Below method is deprecated
+        driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);*/
+
         // This is a global setting that applies to every element location call for the entire session.
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
