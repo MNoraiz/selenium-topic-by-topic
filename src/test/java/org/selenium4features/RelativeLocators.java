@@ -22,9 +22,11 @@ public class RelativeLocators {
         // FIRST APPROACH: Locate and click the Apple login button which is positioned below the 'amz' element
         driver.findElement(with(By.cssSelector("a[class = 'gr-button gr-button--apple gr-button--fullWidth gr-button--auth']")).below(amz)).click();
 
-        // Second APPROACH: Define a locator for the Apple login button below 'amz' and perform a click action
+        /* Second APPROACH: Define a locator for the Apple login button below 'amz' and perform a click action
         By appleLocator = with(By.cssSelector("a[class = 'gr-button gr-button--apple gr-button--fullWidth gr-button--auth']")).below(amz);
-        driver.findElement(appleLocator).click();
+        driver.findElement(appleLocator).click();*/
+
+
 
     }
 }
