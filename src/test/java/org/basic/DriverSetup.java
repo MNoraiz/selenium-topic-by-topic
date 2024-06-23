@@ -11,8 +11,7 @@ public class DriverSetup {
         System.out.println(driver.getCurrentUrl());
         System.out.println(driver.getTitle());
         System.out.println(driver.getWindowHandle());  // get the window handle/ID of the current window by using*/
-
-        System.out.println(driver.getPageSource());
+        System.out.println(driver.getTitle());
 
 
 
